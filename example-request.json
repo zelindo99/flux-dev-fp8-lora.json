@@ -33,7 +33,7 @@
       },
       "6": {
         "inputs": {
-          "text": "anime, A divine, hyperrealistic woman is seated in a relaxed pose against a black void, framed from upper body down. Her translucent silk outfit reveals her curves and prominent cleavage, flowing like vapor around her form. Her white-grey hair falls behind her shoulders in a ponytail, catching subtle cinematic light. Her blue eyes are fixed on the viewer, warm and lifelike. White stockings add sensual detail to her fully visible legs. The scene is softly dreamlike, with swirling fog and barely-there angel wings glowing in the background. Photorealistic lighting and skin texture.",
+          "text": "l3n0v0. wide-angle 18 mm interior shot, deserted shopping-mall corridor after closing time, rows of closed metal roller shutters, “You shouldn't be here” signage half-lit, lonely potted plant for scale, moody tungsten floodlights casting deep orange glow and long shadows, pockets of near-black darkness at the edges, soft volumetric beam slicing through dust motes, early-2000s CCD sensor vibe with slight noise and bloom, low-key cinematic lighting, mirror’s-edge-meets-y2k minimalism, gritty urban isolation mood. amateur quality, candid style",
           "clip": [
             "28",
             1
@@ -88,54 +88,4 @@
       },
       "10": {
         "inputs": {
-          "width": 1024,
-          "height": 1024,
-          "batch_size": 1
-        },
-        "class_type": "EmptySD3LatentImage",
-        "_meta": {
-          "title": "EmptySD3LatentImage"
-        }
-      },
-      "11": {
-        "inputs": {
-          "value": 3.5,
-          "conditioning": [
-            "6",
-            0
-          ]
-        },
-        "class_type": "FluxGuidance",
-        "_meta": {
-          "title": "FluxGuidance"
-        }
-      },
-      "28": {
-        "inputs": {
-          "value": {},
-          "model": [
-            "30",
-            0
-          ],
-          "clip": [
-            "30",
-            1
-          ]
-        },
-        "class_type": "Power Lora Loader (rgthree)",
-        "_meta": {
-          "title": "Power Lora Loader (rgthree)"
-        }
-      },
-      "30": {
-        "inputs": {
-          "ckpt_name": "flux1-dev-fp8.safetensors"
-        },
-        "class_type": "CheckpointLoaderSimple",
-        "_meta": {
-          "title": "CheckpointLoaderSimple"
-        }
-      }
-    }
-  }
-}
+          "widt
