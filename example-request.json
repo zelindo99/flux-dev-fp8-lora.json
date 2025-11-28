@@ -1,0 +1,141 @@
+{
+  "input": {
+    "workflow": {
+      "3": {
+        "inputs": {
+          "seed": 588342317022017,
+          "steps": 20,
+          "cfg": 1,
+          "sampler_name": "euler",
+          "scheduler": "beta",
+          "denoise": 1,
+          "model": [
+            "28",
+            0
+          ],
+          "positive": [
+            "11",
+            0
+          ],
+          "negative": [
+            "7",
+            0
+          ],
+          "latent_image": [
+            "10",
+            0
+          ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "6": {
+        "inputs": {
+          "text": "anime, A divine, hyperrealistic woman is seated in a relaxed pose against a black void, framed from upper body down. Her translucent silk outfit reveals her curves and prominent cleavage, flowing like vapor around her form. Her white-grey hair falls behind her shoulders in a ponytail, catching subtle cinematic light. Her blue eyes are fixed on the viewer, warm and lifelike. White stockings add sensual detail to her fully visible legs. The scene is softly dreamlike, with swirling fog and barely-there angel wings glowing in the background. Photorealistic lighting and skin texture.",
+          "clip": [
+            "28",
+            1
+          ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIPTextEncode"
+        }
+      },
+      "7": {
+        "inputs": {
+          "text": "",
+          "clip": [
+            "28",
+            1
+          ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIPTextEncode"
+        }
+      },
+      "8": {
+        "inputs": {
+          "samples": [
+            "3",
+            0
+          ],
+          "vae": [
+            "30",
+            2
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "9": {
+        "inputs": {
+          "filename_prefix": "ComfyUI",
+          "images": [
+            "8",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "10": {
+        "inputs": {
+          "width": 1024,
+          "height": 1024,
+          "batch_size": 1
+        },
+        "class_type": "EmptySD3LatentImage",
+        "_meta": {
+          "title": "EmptySD3LatentImage"
+        }
+      },
+      "11": {
+        "inputs": {
+          "value": 3.5,
+          "conditioning": [
+            "6",
+            0
+          ]
+        },
+        "class_type": "FluxGuidance",
+        "_meta": {
+          "title": "FluxGuidance"
+        }
+      },
+      "28": {
+        "inputs": {
+          "value": {},
+          "model": [
+            "30",
+            0
+          ],
+          "clip": [
+            "30",
+            1
+          ]
+        },
+        "class_type": "Power Lora Loader (rgthree)",
+        "_meta": {
+          "title": "Power Lora Loader (rgthree)"
+        }
+      },
+      "30": {
+        "inputs": {
+          "ckpt_name": "flux1-dev-fp8.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+          "title": "CheckpointLoaderSimple"
+        }
+      }
+    }
+  }
+}
